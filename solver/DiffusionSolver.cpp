@@ -99,6 +99,8 @@ void DiffusionSolver::clear() {
     for (Country* country: countries) {
         delete country;
     }
+    delete grid;
+    grid = nullptr;
     countries.clear();
     countrySolutions.clear();
     currentStepChanges.erase(currentStepChanges.begin(), currentStepChanges.end());
